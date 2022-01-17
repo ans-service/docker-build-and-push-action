@@ -1,0 +1,14 @@
+#!/bin/sh -l
+
+IMAGE="$INPUT_REGISTRY/$INPUT_REPOSITORY/$INPUT_IMAGE_NAME:$INPUT_IMAGE_TAG"
+IMAGE_LATEST="$INPUT_REGISTRY/$INPUT_REPOSITORY/$INPUT_IMAGE_NAME:latest"
+
+docker login $INPUT_REGISTRY -u $INPUT_USERNAME -p $INPUT_PASSWORD
+docker build -t $IMAGE .
+
+docker tag $IMAGE $IMAGE_LATEST
+
+docker push $IMAGE
+docker push $IMAGE_LATEST
+
+echo "::set-output name=image_path::$IMAGE"

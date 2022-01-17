@@ -1,0 +1,35 @@
+name: 'Build and Push Docker Image'
+description: 'This action builds and pushes a Docker image onto Container Registry'
+inputs:
+  username:
+    description: 'Container Registry Username'
+    required: true
+  password:
+    description: 'Container Registry password'
+    required: true
+  registry:
+    description: 'Container Registry name'
+    required: true
+  repository:
+    description: 'Container Repository name'
+    required: true
+  image_name:
+    description: 'Container image name'
+    required: true
+  image_tag:
+    description: 'Container image tag'
+    required: true
+    default: 'latest'
+outputs:
+  image_path:
+    description: 'New container path generated'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.username }}
+    - ${{ inputs.password }}
+    - ${{ inputs.registry }}
+    - ${{ inputs.repository }}
+    - ${{ inputs.image_name }}
+    - ${{ inputs.image_tag }}
