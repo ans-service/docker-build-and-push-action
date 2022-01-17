@@ -4,10 +4,22 @@
 
 This action allows you to build and push a Dockerfile onto a Container Registry (Azure Container Registry for example).
 
+## Requirement
+
+- Source code must have a valid **Dockerfile**.
+
 ## Usage
 
+### CHECKOUT source code from repository
+
+``` yaml
+      - name: Checkout
+        uses: actions/checkout@v2
+```
+
 ### ADD Step On workflow
-Only you need to add the nexts lines on your github workflow replacing yours custom variables:
+
+Only you need to add the next lines on your github workflow replacing your custom variables:
 
 ``` yaml
       - name: Docker Build and Push
