@@ -10,7 +10,7 @@ This action allows you to build and push a Dockerfile onto a Container Registry 
 
 ## Usage
 
-### CHECKOUT source code from repository
+### CHECKOUT source code from repository
 
 ``` yaml
       - name: Checkout
