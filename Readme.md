@@ -24,7 +24,7 @@ Only you need to add the next lines on your github workflow replacing your custo
 ``` yaml
       - name: Docker Build and Push
         id: build_and_push
-        uses: ans-service/docker-build-and-push@v1.0
+        uses: ans-service/docker-build-and-push-action@v1.0
         with:
           username:   ${{ secrets.DOCKER_USERNAME }}
           password:   ${{ secrets.DOCKER_PASSWORD }}
