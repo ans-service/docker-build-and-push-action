@@ -36,3 +36,4 @@ runs:
     - ${{ inputs.repository }}
     - ${{ inputs.image_name }}
     - ${{ inputs.image_tag }}
+    - ${{ inputs.docker_file_path }}
