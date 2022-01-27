@@ -16,6 +16,9 @@ inputs:
   image_name:
     description: 'Container image name'
     required: true
+  docker_file_path:
+    description: 'docker file path'
+    required: true  
   image_tag:
     description: 'Container image tag'
     required: true
