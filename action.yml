@@ -19,7 +19,11 @@ inputs:
   docker_file_path:
     description: 'docker file path'
     required: false
-    default : 'Dockerfile'  
+    default : 'Dockerfile'
+  work_folder:
+    description: 'docker file path'
+    required: false
+    default : '.'        
   image_tag:
     description: 'Container image tag'
     required: true
@@ -38,3 +42,4 @@ runs:
     - ${{ inputs.image_name }}
     - ${{ inputs.image_tag }}
     - ${{ inputs.docker_file_path }}
+    - ${{ inputs.work_folder }}
