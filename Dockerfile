@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM docker:20.10
+FROM mcr.microsoft.com/azure-cli
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
