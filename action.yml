@@ -2,13 +2,16 @@ name: 'Build and Push Docker Image'
 description: 'This action builds and pushes a Docker image onto Container Registry'
 inputs:
   username:
-    description: 'Container Registry Username'
+    description: 'Service Principal Username'
     required: true
   password:
-    description: 'Container Registry password'
+    description: 'Service Principal password'
     required: true
+  tenant: 
+    description: 'Azure Container Registry Tenant'
+    required: true  
   registry:
-    description: 'Container Registry name'
+    description: 'Azure Container Registry name'
     required: true
   repository:
     description: 'Container Repository name'
@@ -29,6 +32,7 @@ runs:
   args:
     - ${{ inputs.username }}
     - ${{ inputs.password }}
+    - ${{ inputs.tenant }}
     - ${{ inputs.registry }}
     - ${{ inputs.repository }}
     - ${{ inputs.image_name }}
