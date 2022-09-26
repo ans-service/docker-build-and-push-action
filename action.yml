@@ -25,7 +25,7 @@ inputs:
     default: 'latest'
   build_args:
     description: 'extra args'
-    required: true
+    required: false
     default: ''
 outputs:
   image_path:
