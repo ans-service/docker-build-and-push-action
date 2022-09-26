@@ -37,3 +37,4 @@ runs:
     - ${{ inputs.repository }}
     - ${{ inputs.image_name }}
     - ${{ inputs.image_tag }}
+    - ${{ inputs.build_args }}
