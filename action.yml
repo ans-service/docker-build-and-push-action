@@ -23,6 +23,10 @@ inputs:
     description: 'Container image tag'
     required: true
     default: 'latest'
+  build_args:
+    description: 'extra args'
+    required: true
+    default: ''
 outputs:
   image_path:
     description: 'New container path generated'
